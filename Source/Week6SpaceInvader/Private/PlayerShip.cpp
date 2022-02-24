@@ -42,10 +42,7 @@ APlayerShip::APlayerShip()
 	if (Model3D.Succeeded()) {
 		PlayerMesh->SetStaticMesh(Model3D.Object);
 	}
-//	PlayerMesh->SetSimulatePhysics(true);
-	AmoUIComp = CreateDefaultSubobject<UWidgetComponent>(TEXT("AmoBar"));
-	AmoUIComp->SetupAttachment(PlayerMesh);
-	MainUiComp = CreateDefaultSubobject<UWidgetComponent>(TEXT("MainWidgetPtr"));
+
 
 }
 
@@ -89,8 +86,8 @@ void APlayerShip::BeginPlay()
         UE_LOG(LogTemp, Warning, TEXT("CollisionBox not found!"));
     }
 
-	UWAmoBar* AmmoBar = Cast <UWAmoBar>(AmoUIComp->GetUserWidgetObject());
-	AmmoBar->SetOwner(this);
+	//UWAmoBar* AmmoBar = Cast <UWAmoBar>(AmoUIComp->GetUserWidgetObject());
+	//AmmoBar->SetOwner(this);
 
 
 	if (ScreenUiWidget) {

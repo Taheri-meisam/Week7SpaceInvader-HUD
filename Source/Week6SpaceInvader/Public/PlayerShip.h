@@ -62,16 +62,14 @@ TSubclassOf<AActor> ActorToSpawn;
 
 UPROPERTY(EditAnywhere, meta =(AllowPrivateAccess = "true"));
 TSubclassOf<AActor> ActorEney;
-UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="UI")
-class UWidgetComponent* AmoUIComp;
+
 
 UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
 TSubclassOf<UUserWidget> ScreenUiWidget;
 
 UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
 UUserWidget* MainWidgetPtr = nullptr;
-UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
-class UWidgetComponent* MainUiComp;
+
 
 void Reload();
 
