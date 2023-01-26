@@ -12,7 +12,26 @@
 
 /**
  * 
+ * 
+ * 
+UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
+TSubclassOf<UUserWidget> ScreenUiWidget;
+
+UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
+UUserWidget* MainWidgetPtr = nullptr;
+
  */
+
+/*
+	if (ScreenUiWidget) {
+		MainWidgetPtr = CreateWidget<UUserWidget>(AActor::GetWorld(), ScreenUiWidget);
+	}
+
+	MainWidgetPtr->AddToViewport();
+	MainWidgetPtr->SetVisibility(ESlateVisibility::Visible);
+
+
+*/
 UCLASS()
 class WEEK6SPACEINVADER_API UClassHUD : public UUserWidget
 {
